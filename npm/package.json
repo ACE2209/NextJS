@@ -1,5 +1,5 @@
 {
-  "name": "nextjs",
+  "name": "npm",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,10 +8,9 @@
     "start": "next start"
   },
   "dependencies": {
-    "@chakra-ui/react": "^3.27.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
-    "framer-motion": "^12.23.12",
+    "@mui/material": "^7.3.2",
     "next": "15.5.3",
     "react": "19.1.0",
     "react-dom": "19.1.0"

@@ -1,4 +1,5 @@
-import About from "./about/page"; // import component của trang About
+import About from "@/app/about/page";
+
 
 export default function App() {
   return (
