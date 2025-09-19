@@ -1,9 +1,11 @@
-import posts from '@/data/posts';
+// app/posts/[id]/page.tsx
+// dynamic route hiển thị 1 bài theo params.id.
+import posts from "@/data/posts";
 
 export const revalidate = 10; // tùy ý
 
 export default async function PostPage({ params }: { params: { id: string } }) {
-  const post = posts.find(p => p.id === params.id);
+  const post = posts.find((p) => p.id === params.id);
   if (!post) return <p>Không tìm thấy bài viết</p>;
 
   return (
