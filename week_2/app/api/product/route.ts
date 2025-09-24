@@ -1,5 +1,5 @@
 // app/api/product/route.ts
-import { NextResponse } from "next/server";
+import { NextResponse } from 'next/server';
 
 type Product = { id: number; name: string; price: number };
 
@@ -28,10 +28,10 @@ export async function POST(req: Request) {
 // PUT: cập nhật sản phẩm { id, name?, price? }
 export async function PUT(req: Request) {
   const body = await req.json();
-  const index = products.findIndex((p) => p.id === body.id);
+  const index = products.findIndex(p => p.id === body.id);
   if (body.price !== undefined) {
-    body.price = Number(body.price) || 0;
-  }
+  body.price = Number(body.price) || 0;
+}
 
   products[index] = { ...products[index], ...body };
   return NextResponse.json(products[index]);
@@ -40,6 +40,6 @@ export async function PUT(req: Request) {
 // DELETE: xóa sản phẩm { id }
 export async function DELETE(req: Request) {
   const body = await req.json();
-  products = products.filter((p) => p.id !== body.id);
+  products = products.filter(p => p.id !== body.id);
   return NextResponse.json({ success: true });
 }
