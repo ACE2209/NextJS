@@ -27,7 +27,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/day3/next_image/next.config.js"
+    "app/day3/Image_Optimization/next.config.js"
   ],
   "exclude": ["node_modules"]
 }
