@@ -1,0 +1,10 @@
+Luồng Tương Tác & Thứ Tự “Chạy”
+    Người dùng mở trang Home
+    RootLayout → SessionProvider → Home.
+    useSession() hỏi API /api/auth/session → NextAuth handler trả về session (nếu cookie có).
+    Chưa đăng nhập → click “Đăng nhập với GitHub” → gọi login() → signIn("github").
+    NextAuth backend (/api/auth/[...nextauth]) điều hướng tới GitHub OAuth.
+    GitHub xác thực → callback về /api/auth/callback/github → tạo cookie session mã hóa bằng AUTH_SECRET.
+    Trở lại Home → useSession() nhận session → hiển thị tên, email.
+    Khi vào /dashboard → server component chạy auth() ngay trước render, nếu không có session → redirect.
+    Đăng xuất → logout() → signOut() gọi /api/auth/signout xoá cookie → quay về “chưa đăng nhập”.
