@@ -2,10 +2,6 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  // liên thông vs code trong image_optimization/image.tsx
-  images: {
-    domains: ["www.comingsoon.net"],
-  },
 };
 
 export default nextConfig;
